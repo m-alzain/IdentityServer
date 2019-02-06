@@ -21,8 +21,8 @@ namespace IdentityServer
             //CreateWebHostBuilder(args).Build().Run();
 
             var host = CreateWebHostBuilder(args).Build();
-            //EnsureDatabaseCreation(host.Services);
-            //SeedData.EnsureSeedData(host.Services);
+            EnsureDatabaseCreation(host.Services);
+            SeedData.EnsureSeedData(host.Services);
             host.Run();
         }
 
@@ -30,14 +30,14 @@ namespace IdentityServer
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
 
-        //private static void EnsureDatabaseCreation(IServiceProvider services)
-        //{
-        //    using (var scope = services.GetRequiredService<IServiceScopeFactory>().CreateScope())
-        //    {
-        //        scope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
-        //        scope.ServiceProvider.GetRequiredService<ConfigurationDbContext>().Database.Migrate();
-        //        scope.ServiceProvider.GetService<ApplicationDbContext>().Database.Migrate();
-        //    }
-        //}
+        private static void EnsureDatabaseCreation(IServiceProvider services)
+        {
+            using (var scope = services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                scope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+                scope.ServiceProvider.GetRequiredService<ConfigurationDbContext>().Database.Migrate();
+                scope.ServiceProvider.GetService<ApplicationDbContext>().Database.Migrate();
+            }
+        }
     }
 }

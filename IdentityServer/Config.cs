@@ -28,7 +28,12 @@ namespace IdentityServer
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "API-1"),
+                new ApiResource("api1", "API-1"){
+                    ApiSecrets =
+                    {
+                        new Secret("api1Secret".Sha256())
+                    }
+                },
                 //new ApiResource("securedFiles")
                 //{
                 //    ApiSecrets =
@@ -168,6 +173,7 @@ namespace IdentityServer
                     //},
                     RedirectUris = new List<string>
                     {
+                        "http://localhost:4200/auth-callback",
                         "http://localhost:4200",
                         "http://localhost:4200/silent-renew.html",
                         "http://localhost:4200/assets/silent-redirect.html",
@@ -182,6 +188,7 @@ namespace IdentityServer
                     //},
                     PostLogoutRedirectUris = new List<string>
                     {
+                        "http://localhost:4200/logout-callback",
                         "http://localhost:4200/unauthorized",
                         "http://localhost:4200"
                     },
