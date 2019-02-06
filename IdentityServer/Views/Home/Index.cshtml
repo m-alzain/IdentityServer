@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@using IdentityServer.Resources
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+
+@inject IViewLocalizer LocService
+@{
+    //ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <h6>@LocService["WELCOME_BACK"] @User.Identity.Name</h6>
+            <h6>@LocService["HOME_MESSAGE"]</h6>
+            @*<h1>Home</h1>
+            <h1>@CultureInfo.CurrentCulture</h1>
+                <h2>User Claims</h2>
+                <dl>
+                    @foreach (var claim in User.Claims)
+                    {
+                        <dt>@claim.Type</dt>
+                        <dd>@claim.Value</dd>
+                    }
+                </dl>
+
+            var authScheme = "Identity.Application";
+            if (!String.IsNullOrWhiteSpace(authScheme))
+            {
+                <h2>Cookies Properties</h2>
+                <dl>
+                    @{
+                        var props = (await Context.AuthenticateAsync(authScheme)).Properties;
+                    }
+                    @foreach (var item in props.Items)
+                    {
+                        <dt>@item.Key</dt>
+                        <dd>@item.Value</dd>
+                    }
+                </dl>
+            }*@
+        }
+    </div>
+</div>
+

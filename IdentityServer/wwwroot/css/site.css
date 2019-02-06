@@ -1,0 +1,59 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*html[dir="rtl"] .row ,html[dir="rtl"] .row > .col-xs-1, html[dir="rtl"] .row > .col-xs-2, html[dir="rtl"] .row > .col-xs-3, html[dir="rtl"] .row > .col-xs-4, html[dir="rtl"] .row > .col-xs-5, html[dir="rtl"] .row > .col-xs-6, html[dir="rtl"] .row > .col-xs-7, html[dir="rtl"] .row > .col-xs-8, html[dir="rtl"] .row > .col-xs-9, html[dir="rtl"] .row > .col-xs-10, html[dir="rtl"] .row > .col-xs-11, html[dir="rtl"] .row > .col-xs-12 {
+    float: right;
+}
+
+@media (min-width: 768px) {
+    html[dir="rtl"] .row > .col-sm-1, html[dir="rtl"] .row > .col-sm-2, html[dir="rtl"] .row > .col-sm-3, html[dir="rtl"] .row > .col-sm-4, html[dir="rtl"] .row > .col-sm-5, html[dir="rtl"] .row > .col-sm-6, html[dir="rtl"] .row > .col-sm-7, html[dir="rtl"] .row > .col-sm-8, html[dir="rtl"] .row > .col-sm-9, html[dir="rtl"] .row > .col-sm-10, html[dir="rtl"] .row > .col-sm-11, html[dir="rtl"] .row > .col-sm-12 {
+        float: right;
+    }
+}
+
+@media (min-width: 992px) {
+    html[dir="rtl"] .row > .col-md-1, html[dir="rtl"] .row > .col-md-2, html[dir="rtl"] .row > .col-md-3, html[dir="rtl"] .row > .col-md-4, html[dir="rtl"] .row > .col-md-5, html[dir="rtl"] .row > .col-md-6, html[dir="rtl"] .row > .col-md-7, html[dir="rtl"] .row > .col-md-8, html[dir="rtl"] .row > .col-md-9, html[dir="rtl"] .row > .col-md-10, html[dir="rtl"] .row > .col-md-11, html[dir="rtl"] .row > .col-md-12 {
+        float: right;
+    }
+}
+
+@media (min-width: 1170px) {
+    html[dir="rtl"] .row > .col-lg-1, html[dir="rtl"] .row > .col-lg-2, html[dir="rtl"] .row > .col-lg-3, html[dir="rtl"] .row > .col-lg-4, html[dir="rtl"] .row > .col-lg-5, html[dir="rtl"] .row > .col-lg-6, html[dir="rtl"] .row > .col-lg-7, html[dir="rtl"] .row > .col-lg-8, html[dir="rtl"] .row > .col-lg-9, html[dir="rtl"] .row > .col-lg-10, html[dir="rtl"] .row > .col-lg-11, html[dir="rtl"] .row > .col-lg-12 {
+        float: right;
+    }
+}*/

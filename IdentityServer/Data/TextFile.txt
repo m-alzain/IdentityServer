@@ -1,0 +1,7 @@
+﻿cmd commands:
+dotnet ef migrations add Initial -c PersistedGrantDbContext -o Migrations/PersistedGrantDb
+dotnet ef migrations add Initial -c ConfigurationDbContext -o Migrations/ConfigurationDb
+dotnet ef migrations add Initial -c ApplicationDbContext -o Migrations/IdentityDb
+dotnet ef database update --context PersistedGrantDbContext
+dotnet ef database update --context ConfigurationDbContext
+dotnet ef database update --context ApplicationDbContext
